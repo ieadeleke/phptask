@@ -20,8 +20,11 @@
 	<form action="processed.php" method="post">
 		<h3>Contact Form</h3>
 		<h6>Please fill in your details carefully</h6>
-		<label>Name</label> <br>
-		<input type="text" name="name" class="control" placeholder="full name">
+		<label>First name</label> <br>
+		<input type="text" name="first_name" class="control">
+		<br> <br>
+		<label>Last name</label> <br>
+		<input type="text" name="last_name" class="control">
 		<br> <br>
 		<label>Email</label> <br>
 		<input type="email" name="email" class="control" placeholder="email address">
@@ -50,6 +53,5 @@
 		<br> <br>
 		<input type="submit" name="submit" value="Submit details">
 	</form>
-
 </body>
 </html>
