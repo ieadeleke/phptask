@@ -1,18 +1,25 @@
 <?php
 
-	if (isset($_POST['submit'])) {
+	if(isset($_POST['submit'])) {
 
-		$name = $_POST['name'];
-		$state = $_POST['state'];
-		$gender = $_POST['gender'];
-		$message = $_POST['message'];
-		$email = $_POST['email'];
+		$file = fopen($_POST['first_name'] . '.txt', 'w');
 
-		echo $name . '\'s Form <br><br><br>';
-		echo ' Hi there ' .$name. ' , These are the details of your submission: <br> <br><br>
-			name : '. $name .' <br> email : '. $email .' <br> state : '. $state .' <br> gender : '. $gender .' <br> message : ' . $message ;
+		fwrite( $file, 'First name: ' . $_POST['first_name'] . " ;\n  ");
+		fwrite( $file, 'Last name: ' . $_POST['last_name'] . " ;\n ");
+		fwrite( $file, 'Email: ' . $_POST['email'] . " ;\n ");
+		fwrite( $file, 'State: ' . $_POST['state'] . " ;\n ");
+		fwrite( $file, 'Gender: '. $_POST['gender'] . " ;\n ");
+		fwrite( $file, 'Message: '. $_POST['message'] . " ;\n ");
 
-	};
+
+
+
+		fclose($file);
+
+		header('location: phptask.php');
+
+	}
+
 
 
 
